@@ -1,11 +1,8 @@
 @extends('layouts.app')
 
 
-@section('title', 'Welcome')
-
-
-@section('content')
-    <div class="flex-center position-ref full-height">
+@section('title', 'Offline')
+	<div class="flex-center position-ref full-height">
         @if (Route::has('login'))
             <div class="top-right links">
                 @auth
@@ -22,9 +19,11 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Laravel
+                Offline Mode
             </div>
-
+			<div>
+				We have entered offline mode. Don't worry, you can still use this app!
+			</div>
             <div class="links">
                 <a href="https://laravel.com/docs">Docs</a>
                 <a href="https://laracasts.com">Laracasts</a>
@@ -36,4 +35,7 @@
             </div>
         </div>
     </div>
+
+@section('content')
+
 @endsection
